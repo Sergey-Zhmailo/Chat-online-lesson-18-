@@ -1,0 +1,24 @@
+{
+  "name": "project-chat",
+  "version": "1.0.0",
+  "description": "Project Online Chat (lesson-18) //Sergey Zhmailo// - Front-end Online (17/02/18)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sergey-Zhmailo/Chat-online-lesson-18-.git"
+  },
+  "author": "Sergey Zhmailo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sergey-Zhmailo/Chat-online-lesson-18-/issues"
+  },
+  "homepage": "https://github.com/Sergey-Zhmailo/Chat-online-lesson-18-#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "npm": "^6.0.0"
+  }
+}
