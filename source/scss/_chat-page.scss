@@ -1,0 +1,87 @@
+//========== DEFAULT STYLES START ==========
+.container {
+  max-width: $page-layout;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+//========== DEFAULT STYLES END ==========
+
+//========== HEADER START ==========
+#header {
+  background-color: $primary-color;
+  padding: 13px 0;
+  box-shadow: 0px 5px 30px 0px rgba(52, 152, 219, 0.4);
+  .header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    .menu {
+      display: flex;
+      .menu-button {
+        .menu-button-bar {
+          display: block;
+          width: 25px;
+          height: 3px;
+          border-radius: 1px;
+          background-color: #ffffff;
+        }
+        .menu-button-bar + .menu-button-bar {
+          margin-top: 5px;
+        }
+        .menu-button-bar:nth-child(2) {
+          width: 17px;
+        }
+      }
+    }
+    .search {
+      display: flex;
+      margin-left: auto;
+      margin-right: 20px;
+      i {
+        font-size: 22px;
+        color: #ffffff;
+      }
+    }
+    .account {
+      display: flex;
+      align-content: stretch;
+      .account-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        max-width: 150px;
+        .account-title {
+          font-weight: 600;
+          font-size: 15px;
+          letter-spacing: .025em;
+          color: #f6fafe;
+          width: 100%;
+          text-align: right;
+        }
+        .account-status {
+          font-size: 12px;
+          font-weight: 400;
+          letter-spacing: .1em;
+          color: #2775a9;
+        }
+        button {
+          color: #2775a9;
+          font-size: 8px;
+          margin-right: 2px;
+          margin-left: 46px;
+        }
+      }
+    }
+  }
+}
+//========== HEADER END ==========
