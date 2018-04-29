@@ -1,15 +1,32 @@
 //========== DEFAULT STYLES START ==========
 .container {
   max-width: $page-layout;
-  padding-left: 15px;
-  padding-right: 15px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+%text-wrap-nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.scrollbar-inner {
+  .scroll-element {
+    .scroll-bar {
+      background-color: $primary-color;
+      &:hover {
+        opacity: 1;
+        background-color: $primary-color;
+      }
+    }
+  }
 }
 //========== DEFAULT STYLES END ==========
 
@@ -18,70 +35,236 @@
   background-color: $primary-color;
   padding: 13px 0;
   box-shadow: 0px 5px 30px 0px rgba(52, 152, 219, 0.4);
-  .header-menu {
+  .menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
-    .menu {
-      display: flex;
-      .menu-button {
-        .menu-button-bar {
-          display: block;
-          width: 25px;
-          height: 3px;
-          border-radius: 1px;
-          background-color: #ffffff;
-        }
-        .menu-button-bar + .menu-button-bar {
-          margin-top: 5px;
-        }
-        .menu-button-bar:nth-child(2) {
-          width: 17px;
-        }
+    .menu-button {
+      .menu-button-bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        border-radius: 1px;
+        background-color: #ffffff;
+      }
+      //.menu-button-bar
+      .menu-button-bar + .menu-button-bar {
+        margin-top: 5px;
+      }
+      .menu-button-bar:nth-child(2) {
+        width: 17px;
       }
     }
-    .search {
-      display: flex;
-      margin-left: auto;
-      margin-right: 20px;
-      i {
-        font-size: 22px;
-        color: #ffffff;
-      }
-    }
-    .account {
-      display: flex;
-      align-content: stretch;
-      .account-info {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-items: center;
-        max-width: 150px;
-        .account-title {
-          font-weight: 600;
-          font-size: 15px;
-          letter-spacing: .025em;
-          color: #f6fafe;
-          width: 100%;
-          text-align: right;
-        }
-        .account-status {
-          font-size: 12px;
-          font-weight: 400;
-          letter-spacing: .1em;
-          color: #2775a9;
-        }
-        button {
-          color: #2775a9;
-          font-size: 8px;
-          margin-right: 2px;
-          margin-left: 46px;
-        }
-      }
+    //.menu-button
+  }
+  //.menu
+  .search {
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+    i {
+      font-size: 22px;
+      color: #ffffff;
     }
   }
+  //.search
+  .account {
+    display: flex;
+    align-content: stretch;
+    .account-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      max-width: 150px;
+      .account-title {
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: .025em;
+        color: #f6fafe;
+        width: 100%;
+        text-align: right;
+      }
+      //.account-title
+      .account-status {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: .1em;
+        color: #2775a9;
+      }
+      //.account-status
+      button {
+        color: #2775a9;
+        font-size: 8px;
+        margin-right: 2px;
+        margin-left: 46px;
+      }
+      //button
+    }
+    //.account-info
+  }
+  //.account
 }
 //========== HEADER END ==========
+
+//========== MAIN START ==========
+#main {
+  .container {
+    display: flex;
+    .contacts-list {
+      width: 100%;
+      min-width: 275px;
+      max-width: 320px;
+      background-color: $body-bgc-white;
+      height: calc(100vh - 70px);
+      margin: 20px 30px 20px 0;
+      box-shadow: 0px 0px 25px 0px rgba(53, 152, 219, 0.1);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      .contacts-list-top {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        .contacts-list-top-wrapper {
+          border-bottom: 1px solid #edf0f2;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .contacts-list-top-title {
+            font-weight: 600;
+            font-size: 16px;
+            color: $primary-color;
+            letter-spacing: .1em;
+            margin-left: 3px;
+            margin-right: 3px;
+          }
+          //.contacts-list-top-title
+          button {
+            font-weight: 700;
+            font-size: 14px;
+            font-family: 'Lato', sans-serif;
+            line-height: 1;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: $default-font-color;
+            padding: 12px 30px;
+            border-radius: 2px;
+            background-color: #d6e3ec;
+            &:hover {
+              background-color: $primary-color;
+              color: #ffffff;
+            }
+          }
+          //button
+        }
+        //.contacts-list-top-wrapper
+      }
+      //.contacts-list-top
+      .contacts-list-users {
+        overflow-y: auto;
+        .contacts-list-user {
+          display: flex;
+          align-items: center;
+          padding-left: 15px;
+          padding-right: 15px;
+          height: 70px;
+          display: flex;
+          align-content: center;
+          &:hover {
+            background-color: $body-bgc;
+          }
+          .contacts-list-user-img {
+            position: relative;
+            min-width: 40px;
+            min-height: 40px;
+            .unread-msg-count {
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              line-height: 20px;
+              top: -8px;
+              right: -5px;
+              font-weight: 700;
+              font-size: 12px;
+              color: #ffffff;
+              background-color: $primary-color;
+              border-radius: 50%;
+              text-align: center;
+              box-shadow: 0px 2px 10px 0px rgba(49, 152, 219, 0.5);
+              &.no-unread-messages {
+                display: none;
+              }
+            }
+            //.unread-msg-count
+          }
+          //.contacts-list-user-img
+          .contacts-list-user-info {
+            position: relative;
+            margin-left: 11px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 222px;
+            .contacts-list-user-info-title {
+              @extend %text-wrap-nowrap;
+              font-weight: 700;
+              font-size: 16px;
+              color: $default-font-color-users-title;
+              display: block;
+              padding-right: 40px;
+              margin-bottom: 10px;
+              &.no-unread-messages {
+                color: $default-font-color;
+              }
+            }
+            //.contacts-list-user-info-title
+            .contacts-list-user-info-message {
+              @extend %text-wrap-nowrap;
+              display: block;
+              padding-right: 40px;
+              &.no-unread-messages {
+                color: #c9d6df;
+              }
+            }
+            //.contacts-list-user-info-message
+            .contacts-list-user-status {
+              position: absolute;
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              top: 0;
+              right: 0;
+              &.offline {
+                background-color: $offline-color;
+                box-shadow: 0px 1px 5px 0px $offline-color;
+              }
+              //.ofline
+              &.online {
+                background-color: $online-color;
+                box-shadow: 0px 2px 4px 0px $online-color;
+              }
+            }
+            //.contacts-list-user-status
+            .contacts-list-user-last-message-time {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              color: #c9d6df;
+              &.active-chat {
+                display: none;
+              }
+            }
+            //.contacts-list-user-last-message-time
+          }
+          //.contacts-list-user-info
+        }
+        //.contacts-list-user
+      }
+      //.contacts-list-users
+    }
+    //.contacts-list
+  }
+  //.container
+}
+//#main
+//========== MAIN END ==========

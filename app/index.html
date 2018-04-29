@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <!--Font awesome-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--jQuery scrollbar styles-->
+    <link rel="stylesheet" href="css/jquery.scrollbar.css">
     <!--Bootstrap styles
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
     <!--Style-->
@@ -19,7 +21,7 @@
     <!--========== HEADER START ==========-->
     <header id="header">
         <div class="container">
-            <div class="header-menu">
+            <div class="wrapper">
                 <div class="menu">
                     <button class="menu-button">
                         <span class="menu-button-bar"></span>
@@ -51,7 +53,7 @@
                 </div>
                 <!-- /.account -->
             </div>
-            <!-- /.header-menu -->
+            <!-- /.wrapper -->
         </div>
         <!-- /.container -->
     </header>
@@ -59,12 +61,305 @@
     <!--========== HEADER END ==========-->
     <!--========== MAIN START ==========-->
     <main id="main">
-        <div class="container"></div>
+        <div class="container">
+            <div class="wrapper">
+                <aside class="contacts-list">
+                    <div class="contacts-list-top">
+                        <div class="contacts-list-top-wrapper">
+                            <div class="contacts-list-top-title">
+                                <span>Chat</span>
+                            </div>
+                            <!-- /.contacts-list-top-title -->
+                            <button>New</button>
+                        </div>
+                        <!-- /.contact-list-top-wrapper -->
+                    </div>
+                    <!-- /.contact-list-top -->
+                    <div class="contacts-list-users scrollbar-inner">
+                        <div class="contacts-list-user">
+                            <div class="contacts-list-user-img">
+                                <img src="img/user-img-1.png" alt="Fikri Ruslandi">
+                                <span class="unread-msg-count">2</span>
+                                <!-- /.unread-msg-count -->
+                            </div>
+                            <!-- /.contacts-list-user-img -->
+                            <div class="contacts-list-user-info">
+                                <span class="contacts-list-user-info-title">Fikri Ruslandi</span>
+                                <!-- /.contacts-list-user-info-title -->
+                                <span class="contacts-list-user-info-message">Ko, Kumaha Project anu eta</span>
+                                <!-- /.contacts-list-user-info-message -->
+                                <span class="contacts-list-user-status online"></span>
+                                <!-- /.contacts-list-user-status -->
+                                <span class="contacts-list-user-last-message-time">1 min</span>
+                                <!-- /.contacts-list-user-last-message -->
+                            </div>
+                            <!-- /.contacts-list-user-info -->
+                        </div>
+                        <!-- /.contacts-list-user -->
+                        <div class="contacts-list-user">
+                            <div class="contacts-list-user-img">
+                                <img src="img/user-img-2.png" alt="Moch Ramdhani">
+                                <span class="unread-msg-count">3</span>
+                                <!-- /.unread-msg-count -->
+                            </div>
+                            <!-- /.contacts-list-user-img -->
+                            <div class="contacts-list-user-info">
+                                <span class="contacts-list-user-info-title">Moch Ramdhani</span>
+                                <!-- /.contacts-list-user-info-title -->
+                                <span class="contacts-list-user-info-message">Ane menang contes $1000</span>
+                                <!-- /.contacts-list-user-info-message -->
+                                <span class="contacts-list-user-status online"></span>
+                                <!-- /.contacts-list-user-status -->
+                                <span class="contacts-list-user-last-message-time">2 min</span>
+                                <!-- /.contacts-list-user-last-message -->
+                            </div>
+                            <!-- /.contacts-list-user-info -->
+                        </div>
+                        <!-- /.contacts-list-user -->
+                        <div class="contacts-list-user">
+                            <div class="contacts-list-user-img">
+                                <img src="img/user-img-3.png" alt="Abu Abdullah Nugraha">
+                                <span class="unread-msg-count">3</span>
+                                <!-- /.unread-msg-count -->
+                            </div>
+                            <!-- /.contacts-list-user-img -->
+                            <div class="contacts-list-user-info">
+                                <span class="contacts-list-user-info-title">Abu Abdullah Nugraha</span>
+                                <!-- /.contacts-list-user-info-title -->
+                                <span class="contacts-list-user-info-message">is typing a message ...</span>
+                                <!-- /.contacts-list-user-info-message -->
+                                <span class="contacts-list-user-status online"></span>
+                                <!-- /.contacts-list-user-status -->
+                                <span class="contacts-list-user-last-message-time active-chat">2 min</span>
+                                <!-- /.contacts-list-user-last-message -->
+                            </div>
+                            <!-- /.contacts-list-user-info -->
+                        </div>
+                        <!-- /.contacts-list-user -->
+                        <div class="contacts-list-user">
+                            <div class="contacts-list-user-img">
+                                <img src="img/user-img-4.png" alt="Muhammad Fauzi">
+                                <span class="unread-msg-count">4</span>
+                                <!-- /.unread-msg-count -->
+                            </div>
+                            <!-- /.contacts-list-user-img -->
+                            <div class="contacts-list-user-info">
+                                <span class="contacts-list-user-info-title">Muhammad Fauzi</span>
+                                <!-- /.contacts-list-user-info-title -->
+                                <span class="contacts-list-user-info-message">Ko, Minjem sapatu basket ja</span>
+                                <!-- /.contacts-list-user-info-message -->
+                                <span class="contacts-list-user-status offline"></span>
+                                <!-- /.contacts-list-user-status -->
+                                <span class="contacts-list-user-last-message-time">9 min</span>
+                                <!-- /.contacts-list-user-last-message -->
+                            </div>
+                            <!-- /.contacts-list-user-info -->
+                        </div>
+                        <!-- /.contacts-list-user -->
+                        <div class="contacts-list-user">
+                            <div class="contacts-list-user-img">
+                                <img src="img/user-img-5.png" alt="Nurman Tri Gumelar">
+                                <span class="unread-msg-count no-unread-messages">4</span>
+                                <!-- /.unread-msg-count -->
+                            </div>
+                            <!-- /.contacts-list-user-img -->
+                            <div class="contacts-list-user-info">
+                                <span class="contacts-list-user-info-title no-unread-messages">Nurman Tri Gumelar</span>
+                                <!-- /.contacts-list-user-info-title -->
+                                <span class="contacts-list-user-info-message">Technical meeting lomba jog</span>
+                                <!-- /.contacts-list-user-info-message -->
+                                <span class="contacts-list-user-status offline"></span>
+                                <!-- /.contacts-list-user-status -->
+                                <span class="contacts-list-user-last-message-time">9 min</span>
+                                <!-- /.contacts-list-user-last-message -->
+                            </div>
+                            <!-- /.contacts-list-user-info -->
+                        </div>
+                        <!-- /.contacts-list-user -->
+                        <div class="contacts-list-user">
+                            <div class="contacts-list-user-img">
+                                <img src="img/user-img-6.png" alt="Bagas Rhafi">
+                                <span class="unread-msg-count no-unread-messages">4</span>
+                                <!-- /.unread-msg-count -->
+                            </div>
+                            <!-- /.contacts-list-user-img -->
+                            <div class="contacts-list-user-info">
+                                <span class="contacts-list-user-info-title no-unread-messages">Bagas Rhafi</span>
+                                <!-- /.contacts-list-user-info-title -->
+                                <span class="contacts-list-user-info-message">Heeh pan si jamar nge dunk</span>
+                                <!-- /.contacts-list-user-info-message -->
+                                <span class="contacts-list-user-status online"></span>
+                                <!-- /.contacts-list-user-status -->
+                                <span class="contacts-list-user-last-message-time">45 min</span>
+                                <!-- /.contacts-list-user-last-message -->
+                            </div>
+                            <!-- /.contacts-list-user-info -->
+                        </div>
+                        <!-- /.contacts-list-user -->
+                        <div class="contacts-list-user">
+                            <div class="contacts-list-user-img">
+                                <img src="img/user-img-7.png" alt="Saepul Rohman">
+                                <span class="unread-msg-count no-unread-messages">4</span>
+                                <!-- /.unread-msg-count -->
+                            </div>
+                            <!-- /.contacts-list-user-img -->
+                            <div class="contacts-list-user-info">
+                                <span class="contacts-list-user-info-title no-unread-messages">Saepul Rohman</span>
+                                <!-- /.contacts-list-user-info-title -->
+                                <span class="contacts-list-user-info-message">Heeh wpap na </span>
+                                <!-- /.contacts-list-user-info-message -->
+                                <span class="contacts-list-user-status offline"></span>
+                                <!-- /.contacts-list-user-status -->
+                                <span class="contacts-list-user-last-message-time">2 hrs</span>
+                                <!-- /.contacts-list-user-last-message -->
+                            </div>
+                            <!-- /.contacts-list-user-info -->
+                        </div>
+                        <!-- /.contacts-list-user -->
+                        <div class="contacts-list-user">
+                            <div class="contacts-list-user-img">
+                                <img src="img/user-img-8.png" alt="Muhamad Aldiansyah">
+                                <span class="unread-msg-count">6</span>
+                                <!-- /.unread-msg-count -->
+                            </div>
+                            <!-- /.contacts-list-user-img -->
+                            <div class="contacts-list-user-info">
+                                <span class="contacts-list-user-info-title no-unread-messages">Muhamad Aldiansyah</span>
+                                <!-- /.contacts-list-user-info-title -->
+                                <span class="contacts-list-user-info-message">Bales tuh ko bisi disetrum</span>
+                                <!-- /.contacts-list-user-info-message -->
+                                <span class="contacts-list-user-status offline"></span>
+                                <!-- /.contacts-list-user-status -->
+                                <span class="contacts-list-user-last-message-time">2 hrs</span>
+                                <!-- /.contacts-list-user-last-message -->
+                            </div>
+                            <!-- /.contacts-list-user-info -->
+                        </div>
+                        <!-- /.contacts-list-user -->
+                        <div class="contacts-list-user">
+                            <div class="contacts-list-user-img">
+                                <img src="img/user-img-8.png" alt="Muhamad Aldiansyah">
+                                <span class="unread-msg-count">6</span>
+                                <!-- /.unread-msg-count -->
+                            </div>
+                            <!-- /.contacts-list-user-img -->
+                            <div class="contacts-list-user-info">
+                                <span class="contacts-list-user-info-title no-unread-messages">Muhamad Aldiansyah</span>
+                                <!-- /.contacts-list-user-info-title -->
+                                <span class="contacts-list-user-info-message">Bales tuh ko bisi disetrum</span>
+                                <!-- /.contacts-list-user-info-message -->
+                                <span class="contacts-list-user-status offline"></span>
+                                <!-- /.contacts-list-user-status -->
+                                <span class="contacts-list-user-last-message-time">2 hrs</span>
+                                <!-- /.contacts-list-user-last-message -->
+                            </div>
+                            <!-- /.contacts-list-user-info -->
+                        </div>
+                        <!-- /.contacts-list-user -->
+                        <div class="contacts-list-user">
+                            <div class="contacts-list-user-img">
+                                <img src="img/user-img-8.png" alt="Muhamad Aldiansyah">
+                                <span class="unread-msg-count">6</span>
+                                <!-- /.unread-msg-count -->
+                            </div>
+                            <!-- /.contacts-list-user-img -->
+                            <div class="contacts-list-user-info">
+                                <span class="contacts-list-user-info-title no-unread-messages">Muhamad Aldiansyah</span>
+                                <!-- /.contacts-list-user-info-title -->
+                                <span class="contacts-list-user-info-message">Bales tuh ko bisi disetrum</span>
+                                <!-- /.contacts-list-user-info-message -->
+                                <span class="contacts-list-user-status offline"></span>
+                                <!-- /.contacts-list-user-status -->
+                                <span class="contacts-list-user-last-message-time">2 hrs</span>
+                                <!-- /.contacts-list-user-last-message -->
+                            </div>
+                            <!-- /.contacts-list-user-info -->
+                        </div>
+                        <!-- /.contacts-list-user -->
+                        <div class="contacts-list-user">
+                            <div class="contacts-list-user-img">
+                                <img src="img/user-img-8.png" alt="Muhamad Aldiansyah">
+                                <span class="unread-msg-count">6</span>
+                                <!-- /.unread-msg-count -->
+                            </div>
+                            <!-- /.contacts-list-user-img -->
+                            <div class="contacts-list-user-info">
+                                <span class="contacts-list-user-info-title no-unread-messages">Muhamad Aldiansyah</span>
+                                <!-- /.contacts-list-user-info-title -->
+                                <span class="contacts-list-user-info-message">Bales tuh ko bisi disetrum</span>
+                                <!-- /.contacts-list-user-info-message -->
+                                <span class="contacts-list-user-status offline"></span>
+                                <!-- /.contacts-list-user-status -->
+                                <span class="contacts-list-user-last-message-time">2 hrs</span>
+                                <!-- /.contacts-list-user-last-message -->
+                            </div>
+                            <!-- /.contacts-list-user-info -->
+                        </div>
+                        <!-- /.contacts-list-user -->
+                        <div class="contacts-list-user">
+                            <div class="contacts-list-user-img">
+                                <img src="img/user-img-8.png" alt="Muhamad Aldiansyah">
+                                <span class="unread-msg-count">6</span>
+                                <!-- /.unread-msg-count -->
+                            </div>
+                            <!-- /.contacts-list-user-img -->
+                            <div class="contacts-list-user-info">
+                                <span class="contacts-list-user-info-title no-unread-messages">Muhamad Aldiansyah</span>
+                                <!-- /.contacts-list-user-info-title -->
+                                <span class="contacts-list-user-info-message">Bales tuh ko bisi disetrum</span>
+                                <!-- /.contacts-list-user-info-message -->
+                                <span class="contacts-list-user-status offline"></span>
+                                <!-- /.contacts-list-user-status -->
+                                <span class="contacts-list-user-last-message-time">2 hrs</span>
+                                <!-- /.contacts-list-user-last-message -->
+                            </div>
+                            <!-- /.contacts-list-user-info -->
+                        </div>
+                        <!-- /.contacts-list-user -->
+                        <div class="contacts-list-user">
+                            <div class="contacts-list-user-img">
+                                <img src="img/user-img-8.png" alt="Muhamad Aldiansyah">
+                                <span class="unread-msg-count">6</span>
+                                <!-- /.unread-msg-count -->
+                            </div>
+                            <!-- /.contacts-list-user-img -->
+                            <div class="contacts-list-user-info">
+                                <span class="contacts-list-user-info-title no-unread-messages">Muhamad Aldiansyah</span>
+                                <!-- /.contacts-list-user-info-title -->
+                                <span class="contacts-list-user-info-message">Bales tuh ko bisi disetrum</span>
+                                <!-- /.contacts-list-user-info-message -->
+                                <span class="contacts-list-user-status offline"></span>
+                                <!-- /.contacts-list-user-status -->
+                                <span class="contacts-list-user-last-message-time">2 hrs</span>
+                                <!-- /.contacts-list-user-last-message -->
+                            </div>
+                            <!-- /.contacts-list-user-info -->
+                        </div>
+                        <!-- /.contacts-list-user -->
+                    </div>
+                    <!-- /.contacts-list-users -->
+                </aside>
+                <!-- /.contacts-list -->
+                <div class="chat">
+
+                </div>
+                <!-- /.chat -->
+            </div>
+            <!-- /.wrapper -->
+        </div>
         <!-- /.container -->
     </main>
     <!-- /#main -->
     <!--========== MAIN END ==========-->
     <!--========== Plugins ==========-->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--jQuery scrollbar styles-->
+    <script src="js/jquery.scrollbar.js"></script>
+    <!--Init plugins-->
+    <script src="js/init.js"></script>
     <!--Bootstrap js
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

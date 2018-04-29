@@ -58,89 +58,240 @@ blockquote {
 
 .container {
   max-width: 891px;
-  padding-left: 15px;
-  padding-right: 15px;
   width: 100%;
   margin-left: auto;
   margin-right: auto; }
 
-.row {
-  margin-left: -15px;
-  margin-right: -15px; }
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+#main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-info .contacts-list-user-info-title, #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-info .contacts-list-user-info-message {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.scrollbar-inner .scroll-element .scroll-bar {
+  background-color: #3498db; }
+  .scrollbar-inner .scroll-element .scroll-bar:hover {
+    opacity: 1;
+    background-color: #3498db; }
 
 #header {
   background-color: #3498db;
   padding: 13px 0;
   -webkit-box-shadow: 0px 5px 30px 0px rgba(52, 152, 219, 0.4);
   box-shadow: 0px 5px 30px 0px rgba(52, 152, 219, 0.4); }
-  #header .header-menu {
+  #header .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    #header .menu .menu-button .menu-button-bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      border-radius: 1px;
+      background-color: #ffffff; }
+    #header .menu .menu-button .menu-button-bar + .menu-button-bar {
+      margin-top: 5px; }
+    #header .menu .menu-button .menu-button-bar:nth-child(2) {
+      width: 17px; }
+  #header .search {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 15px; }
-    #header .header-menu .menu {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      #header .header-menu .menu .menu-button .menu-button-bar {
-        display: block;
-        width: 25px;
-        height: 3px;
-        border-radius: 1px;
-        background-color: #ffffff; }
-      #header .header-menu .menu .menu-button .menu-button-bar + .menu-button-bar {
-        margin-top: 5px; }
-      #header .header-menu .menu .menu-button .menu-button-bar:nth-child(2) {
-        width: 17px; }
-    #header .header-menu .search {
+    margin-left: auto;
+    margin-right: 20px; }
+    #header .search i {
+      font-size: 22px;
+      color: #ffffff; }
+  #header .account {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch; }
+    #header .account .account-info {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      margin-left: auto;
-      margin-right: 20px; }
-      #header .header-menu .search i {
-        font-size: 22px;
-        color: #ffffff; }
-    #header .header-menu .account {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-line-pack: stretch;
-      align-content: stretch; }
-      #header .header-menu .account .account-info {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      max-width: 150px; }
+      #header .account .account-info .account-title {
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: .025em;
+        color: #f6fafe;
+        width: 100%;
+        text-align: right; }
+      #header .account .account-info .account-status {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: .1em;
+        color: #2775a9; }
+      #header .account .account-info button {
+        color: #2775a9;
+        font-size: 8px;
+        margin-right: 2px;
+        margin-left: 46px; }
+
+#main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  #main .container .contacts-list {
+    width: 100%;
+    min-width: 275px;
+    max-width: 320px;
+    background-color: #fff;
+    height: calc(100vh - 70px);
+    margin: 20px 30px 20px 0;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(53, 152, 219, 0.1);
+    box-shadow: 0px 0px 25px 0px rgba(53, 152, 219, 0.1);
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    #main .container .contacts-list .contacts-list-top {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px; }
+      #main .container .contacts-list .contacts-list-top .contacts-list-top-wrapper {
+        border-bottom: 1px solid #edf0f2;
+        height: 60px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        max-width: 150px; }
-        #header .header-menu .account .account-info .account-title {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        #main .container .contacts-list .contacts-list-top .contacts-list-top-wrapper .contacts-list-top-title {
           font-weight: 600;
-          font-size: 15px;
-          letter-spacing: .025em;
-          color: #f6fafe;
-          width: 100%;
-          text-align: right; }
-        #header .header-menu .account .account-info .account-status {
-          font-size: 12px;
-          font-weight: 400;
+          font-size: 16px;
+          color: #3498db;
           letter-spacing: .1em;
-          color: #2775a9; }
-        #header .header-menu .account .account-info button {
-          color: #2775a9;
-          font-size: 8px;
-          margin-right: 2px;
-          margin-left: 46px; }
+          margin-left: 3px;
+          margin-right: 3px; }
+        #main .container .contacts-list .contacts-list-top .contacts-list-top-wrapper button {
+          font-weight: 700;
+          font-size: 14px;
+          font-family: 'Lato', sans-serif;
+          line-height: 1;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+          color: #8ea1b4;
+          padding: 12px 30px;
+          border-radius: 2px;
+          background-color: #d6e3ec; }
+          #main .container .contacts-list .contacts-list-top .contacts-list-top-wrapper button:hover {
+            background-color: #3498db;
+            color: #ffffff; }
+    #main .container .contacts-list .contacts-list-users {
+      overflow-y: auto; }
+      #main .container .contacts-list .contacts-list-users .contacts-list-user {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 70px;
+        display: flex;
+        -ms-flex-line-pack: center;
+        align-content: center; }
+        #main .container .contacts-list .contacts-list-users .contacts-list-user:hover {
+          background-color: #f5f6f8; }
+        #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-img {
+          position: relative;
+          min-width: 40px;
+          min-height: 40px; }
+          #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-img .unread-msg-count {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            top: -8px;
+            right: -5px;
+            font-weight: 700;
+            font-size: 12px;
+            color: #ffffff;
+            background-color: #3498db;
+            border-radius: 50%;
+            text-align: center;
+            -webkit-box-shadow: 0px 2px 10px 0px rgba(49, 152, 219, 0.5);
+            box-shadow: 0px 2px 10px 0px rgba(49, 152, 219, 0.5); }
+            #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-img .unread-msg-count.no-unread-messages {
+              display: none; }
+        #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-info {
+          position: relative;
+          margin-left: 11px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          max-width: 222px; }
+          #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-info .contacts-list-user-info-title {
+            font-weight: 700;
+            font-size: 16px;
+            color: #34495e;
+            display: block;
+            padding-right: 40px;
+            margin-bottom: 10px; }
+            #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-info .contacts-list-user-info-title.no-unread-messages {
+              color: #8ea1b4; }
+          #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-info .contacts-list-user-info-message {
+            display: block;
+            padding-right: 40px; }
+            #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-info .contacts-list-user-info-message.no-unread-messages {
+              color: #c9d6df; }
+          #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-info .contacts-list-user-status {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            top: 0;
+            right: 0; }
+            #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-info .contacts-list-user-status.offline {
+              background-color: #d4e1ea;
+              -webkit-box-shadow: 0px 1px 5px 0px #d4e1ea;
+              box-shadow: 0px 1px 5px 0px #d4e1ea; }
+            #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-info .contacts-list-user-status.online {
+              background-color: #51dacf;
+              -webkit-box-shadow: 0px 2px 4px 0px #51dacf;
+              box-shadow: 0px 2px 4px 0px #51dacf; }
+          #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-info .contacts-list-user-last-message-time {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: #c9d6df; }
+            #main .container .contacts-list .contacts-list-users .contacts-list-user .contacts-list-user-info .contacts-list-user-last-message-time.active-chat {
+              display: none; }
